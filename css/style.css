@@ -1,14 +1,34 @@
+/* Page */
+
 .page{
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
 }
-/* Header */
-.header-wrapper{
+
+.page__inner{
+    display: block;
+    width: 100%;
+}
+
+.page__inner_intro{
     padding-top: 29px;
+}
+
+.page__inner_grey{
     background-color: #f6f2f2;
 }
+
+.page__inner section{
+    padding: 102px 0 110px;    
+}
+
+.page__header{
+    margin:0 auto;
+}
+
+/* Header */
 
 .header{
     display: flex;
@@ -18,7 +38,12 @@
     margin:0 auto;
     background-color: rgba(0,0,0,0.8);
 }
-.menu-list{
+
+.site-menu{
+    margin-left: -30px;
+}
+
+.site-menu__list{
     display: flex;
     flex-wrap: wrap;
     margin:0;
@@ -26,12 +51,12 @@
     list-style: none;
 }
 
-.menu-list>li{
+.site-menu__item{
     display: flex;
     min-height: 89px;
 }
 
-.menu-link{
+.site-menu__link{
     display: flex;
     align-items: center;
     padding: 0 30px;
@@ -44,22 +69,16 @@
     color: #E0E0E0;
 }
 
-.menu-link:hover{
+.site-menu__link:hover{
     background-color: #FF3F40;
 }
 
-.menu-active{
+.site-menu__link_active{
     background-color: #FF3F40;
 }
 
 /* Main */
 /* Intro */
-.intro-wrapper{
-    display: block;
-    width: 100%;
-    padding: 102px 0 110px;
-    background-color: #f6f2f2;
-}
 
 .intro{
     display: flex;
@@ -68,7 +87,7 @@
     justify-content: space-between;
 }
 
-.intro-info{
+.intro__info{
     max-width: 595px;
 }
 
@@ -84,11 +103,11 @@
     margin-top: -15px;
 }
 
-.intro-special{
+.intro__span_spetial{
     letter-spacing: 6px;
 }
 
-.intro-text{
+.intro__text{
     font-family: 'Open Sans';
     font-weight: 400;
     font-size: 16px;
@@ -97,27 +116,138 @@
     margin-bottom: 58px;
 }
 
-.intro-action{
+.action-link{
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     width:227px;
     padding: 0.5em 1em;
-    box-sizing: border-box;
     min-height: 55px;
-    color: #fff;
     font-family: 'Open Sans';
     font-size: 18px;
     font-weight: 700;
     line-height: 34px;
-    background-color: #ff2d2d;
     border-radius: 5px;
     text-decoration: none;    
 }
 
-.intro-video{
+.action-link_red-full{
+    color: #fff;
+    background-color: #ff2d2d;
+}
+
+.action-link_red-transp{
+    color: #ff2d2d;
+    background-color: rgba(0,0,0,0.0001);
+    border: 2px solid #ff2d2d;
+}
+
+.intro__video{
     width:551px;
     height: 356px;
     object-fit: cover; 
     box-shadow: -2.2px -13.8px 73px rgba(0,0,0,0.29);
+}
+
+/* Services */
+.services{
+    display: flex;
+    width: 1249px;
+    margin: 0 auto;
+    padding: 107px 0 90px;
+    border-bottom: 2px solid #ececec;
+    justify-content: space-between;
+}
+
+.services__info{
+    width: 539px;
+}
+
+.services__heading{
+    margin: 0;
+    margin-bottom: 50px;
+    font-family: 'Open Sans';
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: 0.422159px;
+    text-transform: uppercase;
+}
+
+.services__about{
+    margin: 0;
+    margin-bottom: 64px;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.services__items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 13px;
+    width: 610px;
+}
+
+.services__item{
+    width: 285px;
+    margin-bottom: 53px;
+}
+
+.services__item_icon_mang::before{
+    content: '';
+    display: block;
+    width: 41px;
+    height: 41px;
+    background-image: url('../img/1.svg');
+    background-repeat: no-repeat;
+    margin-bottom: 33px;
+}
+
+.services__item_icon_design::before{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/2.svg');
+    background-repeat: no-repeat;
+    margin-bottom: 33px;
+}
+
+.services__item_icon_logo::before{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url('..//img/3.svg');
+    background-repeat: no-repeat;
+    margin-bottom: 33px;
+}
+
+.services__item_icon_anim::before{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/4.svg');
+    background-repeat: no-repeat;
+    margin-bottom: 33px;
+}
+
+.services__title{
+    margin: 0;
+    margin-bottom: 13px;
+    font-family: 'Open Sans';
+    font-size: 24,0692px;
+    font-weight: 600;
+    line-height: 0px;
+}
+
+.services__text{
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 28px;
 }
