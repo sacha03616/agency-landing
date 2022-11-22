@@ -13,7 +13,6 @@ button{
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    padding-bottom: 1000px;
 }
 
 .page__inner{
@@ -46,7 +45,7 @@ button{
 .header{
     display: flex;
     justify-content: center;
-    width: 1249px;
+    max-width: 1249px;
     min-height: 89px;
     margin:0 auto;
     background-color: rgba(0,0,0,0.8);
@@ -56,12 +55,24 @@ button{
     margin-left: -30px;
 }
 
+@media screen and (max-width:600px) {
+    .site-menu{
+        margin-left: initial;
+    }
+}
+
 .site-menu__list{
     display: flex;
     flex-wrap: wrap;
     margin:0;
     padding: 0;
     list-style: none;
+}
+
+@media screen and (max-width:600px) {
+    .site-menu__list{
+        justify-content: center;
+    }
 }
 
 .site-menu__item{
@@ -95,19 +106,38 @@ button{
 
 .intro{
     display: flex;
-    width: 1249px;
+    flex-wrap: wrap;
+    max-width: 1249px;
     margin: 0 auto;
     justify-content: space-between;
+}
+
+@media screen and (min-width:800px) and (max-width:1240px) {
+    .intro{
+        flex-wrap: nowrap;
+    }
 }
 
 .intro__info{
     max-width: 595px;
 }
 
+@media screen and (max-width:1240px) {
+    .intro__info{
+        width:50%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .intro__info{
+        width:100%;
+    }
+}
+
 .intro__heading{
     font-family: 'Open Sans';
     font-size: 60px;
-    line-height: 72px;
+    line-height: 1.2;
     font-weight: 800;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -116,8 +146,10 @@ button{
     margin-top: -15px;
 }
 
-.intro__span_spetial{
+.intro__span_special{
     letter-spacing: 6px;
+    overflow-wrap: break-word;
+    hyphens: auto;
     
 }
 
@@ -164,10 +196,24 @@ button{
     box-shadow: -2.2px -13.8px 73px rgba(0,0,0,0.29);
 }
 
+@media screen and (max-width:1240px) {
+    .intro__video{
+        width:50%;
+        margin-right: initial;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .intro__video{
+        width:100%;
+        margin-bottom: 80px;
+    }
+}
+
 /* Services */
 .services{
     display: flex;
-    width: 1249px;
+    max-width: 1249px;
     margin: 0 auto;
     padding: 107px 0 90px;
     border-bottom: 2px solid #ececec;
@@ -269,7 +315,7 @@ button{
 /* Feature */
 
 .feature{
-    width: 1249px;
+    max-width: 1249px;
     margin: 0 auto;
     padding: 105px 0 65px;
 }
@@ -365,7 +411,7 @@ button{
 
 /* Team */
 .team{
-    width: 1249px;
+    max-width: 1249px;
     margin: 0 auto;
     padding: 65px 0 53px;
     text-align: left;
@@ -522,7 +568,7 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1249px;
+    max-width: 1249px;
     margin: 0 auto;
     padding: 150px 0 140px;
 }
@@ -583,14 +629,15 @@ button{
 /* Get in Touch */
 
 .feedback{
-    width: 1249px;
+    max-width: 1249px;
     margin: 0 auto;
     padding: 104px 0 107px;
 }
 
 
 .feedback__header{
-    margin-bottom: 67px;
+    max-width: 752px;
+    margin-bottom: 77px;
 }
 
 .feedback__heading{
@@ -605,9 +652,22 @@ button{
 .feedback__about{
     font-family: 'Open Sans';
     font-size: 15.9953px;
-    width: 450px;
+    line-height: 1.75;
     margin: 0;
-    margin-bottom: 39px;
+    margin-bottom: 50px;
+}
+
+.feedback__body{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feedback__form{
+    width: 731px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .feedback__form input::placeholder,
@@ -625,7 +685,7 @@ button{
     border: none;
     border-radius: 5px;
     padding-left: 54px;
-    margin-right: 54px;
+    margin-right: 53px;
     margin-bottom: 44px;
     font-family: 'Open Sans';
     font-size: 15.9134px;
@@ -659,7 +719,8 @@ button{
     box-sizing: border-box;
     resize: none;
     width: 731px;
-    height: 239px;
+    height: 249px;
+    margin-bottom: 45px;
     padding: 31px 51px;
     border: none;
     background-color: rgba(0,0,0,0.1);
@@ -675,7 +736,7 @@ button{
 
 .contacts{
     width: 315px;
-    padding: 141px 17px 141px;
+    padding: 141px 17px 141px 79px;
 }
 
 .contacts__heading{
@@ -683,6 +744,7 @@ button{
     font-family: 'Open Sans';
     font-size: 17.9026px;
     font-weight: 700;
+    line-height: 1.75;
     margin: 0;
     margin-bottom: 30px;
 }
@@ -690,6 +752,7 @@ button{
 .contacts__adress{
     font-family: 'Open Sans';
     font-size: 17.9026px;
+    line-height: 1.75;
     margin: 0;
     margin-bottom: 27px;
 }
@@ -708,6 +771,32 @@ button{
     font-family: 'Open Sans';
     margin: 0;
 }
+
+/* Footer */
+.page__inner_dark-2{
+    background-color: #313030;
+}
+
+.footer{
+    max-width: 1249px;
+    min-height: 111px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__copyright{
+    margin: 0;
+    color: #b8b8b8;
+}
+
+.social{
+    display: flex;
+    gap: 18px;
+}
+
+
 
 
 
