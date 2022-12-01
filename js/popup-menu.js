@@ -1,4 +1,6 @@
 'use strict';
+/* jshint node: true */
+/*jshint esnext: true */
 const menuWrapper = document.querySelector('.popup-menu');
 const menuButton = document.querySelector('.popup-menu__button');
 const menuList = document.querySelector('.popup-menu__list');
@@ -12,9 +14,8 @@ menuButton.addEventListener('click',showMenu);
 function closeMenu(evt) {
     let insideMenu = menuWrapper.contains(evt.target);
     
-    if (!insideMenu){
+    if (!insideMenu) {
     menuList.classList.add('hide');
-
     }
 }
 
